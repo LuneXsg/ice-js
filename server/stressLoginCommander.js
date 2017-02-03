@@ -108,11 +108,10 @@ method.runAction = function(runner) {
                     // user.addOffline(fastLoginInfo);
                 });
             }, function(error) {
-                logger.debug("回呼註冊失敗");
-                if( !runner.doLogout ) {
-                    logger.warn(error);
-                    filelogger.error('register callback fail, error: ' + error);
+                logger.error('回呼註冊失敗: ' + error);
+                filelogger.error('register callback fail, error: ' + error);
 
+                if( !runner.doLogout ) {
                     runner.logout();
                 }
 

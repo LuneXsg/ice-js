@@ -349,6 +349,7 @@ var filelogger = require("log4js").getLogger("stressFile");
                 }).exception(function(ex) {
                     // InvokeError
                     logger.error(proxy_name, "AddCallback Error: ", ex);
+                    filelogger.error(proxy_name, "AddCallback Error: ", ex);
 
                     self._callconnectionLister(BravoLogin.ClientFacadeCommand.AddCallbackError, JSON.stringify({ ProxyName: proxy_name }));
 
