@@ -27,6 +27,9 @@
             this.GlacierConnectionString = "AtlanticCity.Glacier2/router :tcp -h " + config.stunnel_host + " -p 8000";
             this.GlacierConnectionString += " :tcp -h " + config.stunnel_host + " -p 8001";
             this.GlacierConnectionString += " :tcp -h " + config.stunnel_host + " -p 8002";
+            this.GlacierConnectionString += " :tcp -h " + config.stunnel_host + " -p 8003";
+            this.GlacierConnectionString += " :tcp -h " + config.stunnel_host + " -p 8004";
+            this.GlacierConnectionString += " :tcp -h " + config.stunnel_host + " -p 8005";
 
             console.log("connectionString: " + JSON.stringify(this.GlacierConnectionString));
 
